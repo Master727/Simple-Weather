@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="800.0" style="-fx-background-image: url('file:src/images/background.jpg');" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StackUnderflowException.Controller">
+   <children>
+       <Rectangle arcHeight="5.0" arcWidth="5.0" height="45.0" layoutX="59.0" layoutY="15.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="331.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="150.0" layoutY="350.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Line endX="800.0" layoutY="350.0" stroke="WHITE" />
+      <Line endY="350.0" layoutX="456.0" stroke="WHITE" />
+      <Line endY="150.0" layoutX="228.0" layoutY="350.0" stroke="WHITE" />
+      <Line endY="150.0" layoutX="114.0" layoutY="350.0" stroke="WHITE" />
+      <Line endY="150.0" layoutX="342.0" layoutY="350.0" stroke="WHITE" />
+      <Line endY="150.0" layoutX="456.0" layoutY="350.0" stroke="WHITE" />
+      <Line endY="150.0" layoutX="570.0" layoutY="350.0" stroke="WHITE" />
+      <Line endY="150.0" layoutX="684.0" layoutY="350.0" stroke="WHITE" />
+      <TabPane layoutX="456.0" prefHeight="351.0" prefWidth="344.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="radarTab" text="Radar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="radarIcon" fitHeight="300.0" fitWidth="300.0" layoutX="22.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="satelliteTab" text="Satellite">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="satelliteIcon" fitHeight="300.0" fitWidth="300.0" layoutX="22.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="getWeather" layoutX="266.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleGetWeather" prefHeight="25.0" prefWidth="75.0" text="Search">
+         <effect>
+            <ColorAdjust contrast="0.32" />
+         </effect></Button>
+      <Label fx:id="forecastDay1" alignment="CENTER" contentDisplay="CENTER" layoutY="350.0" prefHeight="21.0" prefWidth="114.0" text="Day" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastTemp1" alignment="CENTER" contentDisplay="CENTER" layoutY="475.0" prefHeight="17.0" prefWidth="114.0" text="Temp H/L" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastDay2" alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="350.0" prefHeight="21.0" prefWidth="114.0" text="Day" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastTemp2" alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="475.0" prefHeight="17.0" prefWidth="114.0" text="Temp H/L" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastDay3" alignment="CENTER" contentDisplay="CENTER" layoutX="228.0" layoutY="350.0" prefHeight="21.0" prefWidth="114.0" text="Day" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastTemp3" alignment="CENTER" contentDisplay="CENTER" layoutX="228.0" layoutY="475.0" prefHeight="17.0" prefWidth="114.0" text="Temp H/L" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastDay4" alignment="CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="350.0" prefHeight="21.0" prefWidth="114.0" text="Day" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastTemp4" alignment="CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="475.0" prefHeight="17.0" prefWidth="114.0" text="Temp H/L" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastDay5" alignment="CENTER" contentDisplay="CENTER" layoutX="456.0" layoutY="350.0" prefHeight="21.0" prefWidth="114.0" text="Day" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastTemp5" alignment="CENTER" contentDisplay="CENTER" layoutX="456.0" layoutY="475.0" prefHeight="17.0" prefWidth="114.0" text="Temp H/L" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastDay6" alignment="CENTER" contentDisplay="CENTER" layoutX="570.0" layoutY="350.0" prefHeight="21.0" prefWidth="114.0" text="Day" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastTemp6" alignment="CENTER" contentDisplay="CENTER" layoutX="570.0" layoutY="475.0" prefHeight="17.0" prefWidth="114.0" text="Temp H/L" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastDay7" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="350.0" prefHeight="21.0" prefWidth="114.0" text="Day" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastTemp7" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="475.0" prefHeight="17.0" prefWidth="114.0" text="Temp H/L" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <TextField fx:id="zipField" layoutX="68.0" layoutY="25.0" prefHeight="25.0" prefWidth="185.0" promptText="Enter City or Zip" />
+      <Label fx:id="cityOutput" alignment="CENTER" contentDisplay="CENTER" layoutX="53.0" layoutY="71.0" prefWidth="350.0" text="Loading..." textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Circle fill="DODGERBLUE" layoutX="229.0" layoutY="207.0" radius="76.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="High" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="190.0" prefWidth="100.0" text="High" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="Low" alignment="CENTER" contentDisplay="CENTER" layoutX="311.0" layoutY="190.0" prefWidth="100.0" text="Low" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="tempOutput" alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="278.0" prefWidth="250.0" text="Current" textAlignment="CENTER" textFill="WHITE" visible="false">
+         <font>
+            <Font size="50.0" />
+         </font></Label>
+      <ImageView fx:id="forecastIcon1" fitHeight="72.0" fitWidth="77.0" layoutX="19.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="forecastIcon2" fitHeight="72.0" fitWidth="77.0" layoutX="133.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="forecastIcon3" fitHeight="72.0" fitWidth="77.0" layoutX="247.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="forecastIcon4" fitHeight="72.0" fitWidth="77.0" layoutX="361.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="forecastIcon5" fitHeight="72.0" fitWidth="77.0" layoutX="475.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="forecastIcon6" fitHeight="72.0" fitWidth="77.0" layoutX="589.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="forecastIcon7" fitHeight="72.0" fitWidth="77.0" layoutX="703.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="weatherIcon" fitHeight="75.0" fitWidth="75.0" layoutX="192.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="weatherOutput" alignment="CENTER" contentDisplay="CENTER" layoutX="129.0" layoutY="101.0" prefWidth="200.0" text="High" textFill="WHITE" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="temp" layoutX="353.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleTemp" prefHeight="25.0" text="°C">
+         <effect>
+            <ColorAdjust contrast="0.32" />
+         </effect></Button>
+      <Label fx:id="forecastWeather1" alignment="CENTER" contentDisplay="CENTER" layoutY="450.0" prefWidth="114.0" text="weather" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastWeather2" alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="450.0" prefWidth="114.0" text="weather" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastWeather3" alignment="CENTER" contentDisplay="CENTER" layoutX="228.0" layoutY="450.0" prefWidth="114.0" text="weather" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastWeather4" alignment="CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="450.0" prefWidth="114.0" text="weather" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastWeather5" alignment="CENTER" contentDisplay="CENTER" layoutX="456.0" layoutY="450.0" prefWidth="114.0" text="weather" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastWeather6" alignment="CENTER" contentDisplay="CENTER" layoutX="570.0" layoutY="450.0" prefWidth="114.0" text="weather" textAlignment="CENTER" textFill="WHITE" visible="false" />
+      <Label fx:id="forecastWeather7" alignment="CENTER" contentDisplay="CENTER" layoutX="684.0" layoutY="450.0" prefWidth="114.0" text="weather" textAlignment="CENTER" textFill="WHITE" visible="false" />
+   </children>
+</Pane>
